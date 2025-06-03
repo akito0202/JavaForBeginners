@@ -6,7 +6,7 @@ public class Animation extends MyFrame{
 		
 		int count=0;
 		
-		for(count=0;count<=3;count++) {
+		for(count=0;count<=2;count++) {
 		while(x<300) {
 			clear();
 			setColor(0,128,0);
