@@ -11,7 +11,7 @@ import java.util.Vector;
 			vehicles.add(new Truck(10,250,7,0));
 			vehicles.add(new Truck(100,330,7,0));
 			
-			for(int i=0;i<30;i++) {
+			for(int i=0;i<100;i++) {
 				clear();
 				for(int j=0;j<vehicles.size();j++) {
 					vehicles.get(j).draw(this);

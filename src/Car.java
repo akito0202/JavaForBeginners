@@ -1,5 +1,7 @@
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle implements KeyListener{
 	public Car(int x, int y, int vx, int vy) {
 		super(x, y, vx, vy);
 		// TODO 自動生成されたコンストラクター・スタブ
@@ -21,7 +23,49 @@ public class Car extends Vehicle{
 			
 		
 	}
-	
+//キーから文字が入力された時
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+//キーが押された時
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+			vx=-1000;
+			
+		}
+		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+			vx=1000;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_UP) {
+			vy=-1000;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_DOWN) {
+			vy=1000;
+		}
+		// TODO 自動生成されたメソッド・スタブ
+		//System.out.println("キーは押されました");
+	}
+//押されていたキーが離された時
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO 自動生成されたメソッド・スタブ
+		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+			vx=0;
+			
+		}
+		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+			vx=0;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_UP) {
+			vy=0;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_DOWN) {
+			vy=0;
+		}
+
 	//public void move() {
 		//x+=vx;
 		//y+=vy;
@@ -30,4 +74,5 @@ public class Car extends Vehicle{
 		//}
 	//}
 
+}
 }
