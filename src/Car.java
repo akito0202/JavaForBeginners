@@ -33,17 +33,17 @@ public class Car extends Vehicle implements KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
-			vx=-1000;
+			vx=-10;
 			
 		}
 		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
-			vx=1000;
+			vx=10;
 		}
 		if(e.getKeyCode()==KeyEvent.VK_UP) {
-			vy=-1000;
+			vy=-10;
 		}
 		if(e.getKeyCode()==KeyEvent.VK_DOWN) {
-			vy=1000;
+			vy=10;
 		}
 		// TODO 自動生成されたメソッド・スタブ
 		//System.out.println("キーは押されました");

@@ -7,7 +7,7 @@ public class PlayerAnimation extends MyFrame{
 			clear();
 			player.draw(this);
 			player.move();
-			sleep(0.0001);
+			sleep(0.01);
 		}
 	}
 
